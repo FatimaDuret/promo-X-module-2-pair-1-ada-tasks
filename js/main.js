@@ -23,7 +23,7 @@ const tasks = [
 
     for (const task of tasks) {
     
-    listElement.innerHTML += `<li class="tachado"> <input type ="checkbox"/>${task.name}</li>`;
+    listElement.innerHTML += `<li class="tachado"> <input type ="checkbox"/>${tasks.name}</li>`;
   };
 
 };
@@ -31,15 +31,25 @@ const tasks = [
   addTask(tasks);
 
   function renderTask(tasks) {
-  if (tasks.completed === true) {
-    listElement.innerHTML+=  `<li class="tachado"> <input type ="checkbox"/>${task.name}</li>`;
-    
-  }else {
-    listElement.innerHTML+=  `<li> <input type ="checkbox"/>${task.name}</li>`;
+    let listElement = '';
 
+
+  if (tasks.completed === true){
+    listElement=  `<li class="tachado"> <input type ="checkbox"/>${tasks.name}</li>`;
     
-   
-  }}; 
+  }else if(tasks.completed === false){
+    listElement= `<li> <input type ="checkbox"/>${tasks.name}</li>`;
+
+  
+  }else{
+    listElement= `<li> <input type ="checkbox"/>${tasks.name}</li>`;
+
+  }
+  return listElement;
+
+
+  }
+  renderTask();
 
 /* 
   handleRenderTask = (event) => {
@@ -51,7 +61,7 @@ const tasks = [
   
   
   listElement.addEventListener('click', handleClick);
-  
+
   
   
   
