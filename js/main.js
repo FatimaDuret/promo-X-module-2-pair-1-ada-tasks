@@ -6,6 +6,8 @@ const buttonAdd = document.querySelector('.js-btn-add');
 const inputFilter = document.querySelector('.js-text-task-filter');
 const buttonFilter = document.querySelector('.js-btn-filter'); 
 
+let classList = listElement.classList;
+
 const tasks = [
     { name: 'Recoger setas en el campo', completed: true },
     { name: 'Comprar pilas', completed: true },
@@ -17,39 +19,48 @@ const tasks = [
   ];
 
 
-
   const addTask = (tasks) => {
 
     for (const task of tasks) {
     
-    listElement.innerHTML += `<li class="task"><input="checkbox">${task.name}</li>`;
+    listElement.innerHTML += `<li class="task"> <input type ="checkbox"/>${task.name}</li>`;
   };
 
 };
 
   addTask(tasks);
 
+  /* function renderTask(tasks) {
+  if (tasks.completed === true) {
+    classList.add("tachado") */
+    /* return `<li class="task"> <input type ="checkbox" checked/>${tasks.name}</li>`; */
+ /*  }else {
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+    
+   
+  }}; */
 
- /* handleClick = (event) => {
-    const valueInput = inputAdd.value;
-  };
-
-
-
+/* 
+  handleRenderTask = (event) => {
+   
+  }; */
+  
+  
+  
+  
+  
   listElement.addEventListener('click', handleClick);
+  
+  
+  
+  
+  
+  
 
-  console.log(handleClick); */
+ 
+
+
+
+  
+
+  console.log(handleClick);
