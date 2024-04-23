@@ -23,22 +23,23 @@ const tasks = [
 
     for (const task of tasks) {
     
-    listElement.innerHTML += `<li class="task"> <input type ="checkbox"/>${task.name}</li>`;
+    listElement.innerHTML += `<li class="tachado"> <input type ="checkbox"/>${task.name}</li>`;
   };
 
 };
 
   addTask(tasks);
 
-  /* function renderTask(tasks) {
+  function renderTask(tasks) {
   if (tasks.completed === true) {
-    classList.add("tachado") */
-    /* return `<li class="task"> <input type ="checkbox" checked/>${tasks.name}</li>`; */
- /*  }else {
+    listElement.innerHTML+=  `<li class="tachado"> <input type ="checkbox"/>${task.name}</li>`;
+    
+  }else {
+    listElement.innerHTML+=  `<li> <input type ="checkbox"/>${task.name}</li>`;
 
     
    
-  }}; */
+  }}; 
 
 /* 
   handleRenderTask = (event) => {
